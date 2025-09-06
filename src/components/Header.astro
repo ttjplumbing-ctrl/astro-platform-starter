@@ -1,29 +1,27 @@
 ---
-import Logo from '../components/Logo.astro';
+import Logo from './Logo.astro';
 
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Contact', href: '/contact' }
+  { linkText: 'Home', href: '/' },
+  { linkText: 'Contact', href: '/contact' }
 ];
 ---
 
-<nav class="flex flex-wrap items-center justify-between gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <!-- Logo -->
-    <a href="/" class="flex items-center">
-        <Logo class="h-12 w-auto mr-3" />
-        <span class="text-xl font-bold">TTJ Plumbing</span>
-    </a>
+<nav class="flex items-center justify-between py-6 max-w-5xl mx-auto px-6">
+  <!-- Logo + Site Name -->
+  <a href="/" class="flex items-center">
+    <Logo />
+    <span class="ml-3 text-xl font-bold">TTJ Plumbing</span>
+  </a>
 
-    <!-- Navigation Items -->
-    {navItems?.length && (
-        <ul class="flex flex-wrap gap-x-4 gap-y-1">
-            {navItems.map((item) => (
-                <li>
-                    <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                        {item.linkText}
-                    </a>
-                </li>
-            ))}
-        </ul>
-    )}
+  <!-- Navigation -->
+  <ul class="flex gap-4">
+    {navItems.map(item => (
+      <li>
+        <a href={item.href} class="px-2 py-1 hover:text-gray-300">
+          {item.linkText}
+        </a>
+      </li>
+    ))}
+  </ul>
 </nav>
