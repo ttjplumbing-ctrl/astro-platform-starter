@@ -10,11 +10,12 @@ const navItems = [
 <nav class="flex items-center justify-between py-6 max-w-5xl mx-auto px-6">
   <!-- Logo + Site Name -->
   <a href="/" class="flex items-center">
+    <!-- Header logo uses default small size -->
     <Logo />
     <span class="ml-3 text-xl font-bold">TTJ Plumbing</span>
   </a>
 
-  <!-- Navigation -->
+  <!-- Navigation items -->
   <ul class="flex gap-4">
     {navItems.map(item => (
       <li>
