@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
-import Logo from '../components/Logo.astro';
 
 const explainer = `
 Welcome to **TTJ Plumbing** — fast, reliable plumbing services in Casper, WY.
@@ -18,13 +17,8 @@ We handle:
     <!-- Optional announcement -->
     <ContextAlert class="mb-2" />
 
-    <!-- Logo pulled up forcefully -->
-    <div class="flex justify-center -mt-6">
-        <Logo class="w-64 h-auto" />
-    </div>
-
     <!-- Main heading -->
-    <h1 class="mt-2 mb-6 text-center text-4xl font-bold">TTJ Plumbing</h1>
+    <h1 class="mb-6 text-center text-4xl font-bold">TTJ Plumbing</h1>
 
     <!-- Markdown content -->
     <Markdown content={explainer} class="mb-10 text-lg text-center" />
