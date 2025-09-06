@@ -7,29 +7,32 @@ import Header from '../components/Header.astro';
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>{Astro.props.title}</title>
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
-    </head>
-    <body class="antialiased text-white bg-complementary">
-        <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-            <div class="flex flex-col w-full max-w-5xl mx-auto grow">
-                <!-- Header with logo and nav -->
-                <Header />
+  <head>
+    <meta charset="UTF-8" />
+    <title>{Astro.props.title}</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+  </head>
 
-                <!-- Main content slot -->
-                <main class="grow">
-                    <slot />
-                </main>
+  <body class="antialiased text-white bg-gray-900">
+    <div class="flex flex-col min-h-screen px-6 sm:px-12">
+      <div class="flex flex-col w-full max-w-5xl mx-auto grow">
 
-                <!-- Minimal footer -->
-                <footer class="text-center mt-16 text-sm text-gray-500">
-                    &copy; {new Date().getFullYear()} TTJ Plumbing. All rights reserved.
-                </footer>
-            </div>
-        </div>
-    </body>
+        <!-- Header with logo and nav -->
+        <Header />
+
+        <!-- Main content slot -->
+        <main class="grow py-12">
+          <slot />
+        </main>
+
+        <!-- Minimal footer -->
+        <footer class="text-center mt-16 text-sm text-gray-400 py-6">
+          &copy; {new Date().getFullYear()} TTJ Plumbing. All rights reserved.
+        </footer>
+
+      </div>
+    </div>
+  </body>
 </html>
