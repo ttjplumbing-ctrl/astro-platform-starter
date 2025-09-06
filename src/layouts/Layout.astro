@@ -17,18 +17,18 @@ import Header from '../components/Header.astro';
 
   <body class="antialiased text-white bg-gray-900">
     <div class="flex flex-col min-h-screen px-6 sm:px-12">
-      <div class="flex flex-col w-full max-w-5xl mx-auto grow">
+      <div class="flex flex-col w-full max-w-5xl mx-auto">
 
         <!-- Header with logo and nav -->
         <Header />
 
-        <!-- Main content slot -->
-        <main class="grow py-12">
+        <!-- Main content slot with minimal top padding -->
+        <main class="py-4">
           <slot />
         </main>
 
         <!-- Minimal footer -->
-        <footer class="text-center mt-16 text-sm text-gray-400 py-6">
+        <footer class="text-center text-sm text-gray-400 py-6 mt-12">
           &copy; {new Date().getFullYear()} TTJ Plumbing. All rights reserved.
         </footer>
 
