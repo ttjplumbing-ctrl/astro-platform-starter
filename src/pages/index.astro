@@ -4,18 +4,37 @@ import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
 
 const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+Welcome to **TTJ Plumbing** — fast, reliable plumbing services in Buffalo, NY.  
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
+We handle:
+- Residential and commercial plumbing repairs  
+- Installations and upgrades  
+- Emergency plumbing services  
+
+Contact us anytime:  
+- Phone: +1 079-110-8241  
+- Email: [chaosckck@gmail.com](mailto:chaosckck@gmail.com)
 `;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="TTJ Plumbing - Reliable Plumbing Services">
+    <!-- Optional announcement -->
     <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
+
+    <!-- Logo -->
+    <div class="mb-8">
+        <img src="/images/ttj-logo.png" alt="TTJ Plumbing Logo" class="w-48 mx-auto" />
+    </div>
+
+    <!-- Main heading -->
+    <h1 class="mb-6 text-center text-4xl font-bold">TTJ Plumbing</h1>
+
+    <!-- Markdown content -->
+    <Markdown content={explainer} class="mb-10 text-lg text-center" />
+
+    <!-- Call to action button -->
+    <p class="text-center">
+        <a href="mailto:chaosckck@gmail.com" class="btn btn-lg sm:min-w-64">Contact Us</a>
     </p>
 </Layout>
+
