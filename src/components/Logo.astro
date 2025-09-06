@@ -1,3 +1,5 @@
 ---
+const { class: customClass = '' } = Astro.props;
 ---
-<img src="/logo.png" alt="TTJ Plumbing Logo" class="h-12 w-auto" />
+
+<img src="/logo.png" alt="TTJ Plumbing Logo" class={`w-auto ${customClass}`} />
