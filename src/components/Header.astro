@@ -11,9 +11,13 @@ const navItems = [
 ---
 
 <nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+        <Logo class="h-12 w-auto mr-3" />
+        <span class="text-xl font-bold">TTJ Plumbing</span>
     </a>
+
+    <!-- Navigation Items -->
     {
         !!navItems?.length && (
             <ul class="flex flex-wrap gap-x-4 gap-y-1">
